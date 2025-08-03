@@ -19,15 +19,11 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6 font-poppins">
-              Wiki Club Tech
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              United University
-            </p>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-              Empowering students through open knowledge, technology, and collaborative innovation
-            </p>
+            <img
+              src="/lovable-uploads/e12ae66d-dea1-4deb-a63a-81f9fd98707b.png"
+              alt="WikiClub Tech United University"
+              className="w-full max-w-4xl mx-auto h-auto"
+            />
           </motion.div>
 
           <motion.div
