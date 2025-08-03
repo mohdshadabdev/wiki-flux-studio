@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Road to Wiki", href: "#road-to-wiki" },
+  { name: "Road to Wiki", href: "/road-to-wiki" },
   { name: "Gallery", href: "/gallery" },
   { name: "Team", href: "/team" },
 ]
@@ -60,25 +60,18 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.div key={item.name} whileHover={{ scale: 1.05 }}>
-                {item.href.startsWith("#") ? (
-                  <button
-                    onClick={() => handleSmoothScroll(item.href)}
-                    className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-                  >
-                    {item.name}
-                  </button>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`smooth-transition font-medium ${
-                      location.pathname === item.href
+                <Link
+                  to={item.href}
+                  className={`smooth-transition font-medium ${
+                    item.name === "Road to Wiki"
+                      ? "gradient-text animate-pulse"
+                      : location.pathname === item.href
                         ? "text-primary font-semibold"
                         : "text-foreground/80 hover:text-foreground"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                )}
+                  }`}
+                >
+                  {item.name}
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -110,29 +103,19 @@ export function Navigation() {
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <motion.div key={item.name} whileTap={{ scale: 0.95 }}>
-                  {item.href.startsWith("#") ? (
-                    <button
-                      onClick={() => {
-                        handleSmoothScroll(item.href)
-                        setIsMobileMenuOpen(false)
-                      }}
-                      className="block text-foreground/80 hover:text-foreground smooth-transition font-medium py-2"
-                    >
-                      {item.name}
-                    </button>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block smooth-transition font-medium py-2 ${
-                        location.pathname === item.href
+                  <Link
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block smooth-transition font-medium py-2 ${
+                      item.name === "Road to Wiki"
+                        ? "gradient-text animate-pulse"
+                        : location.pathname === item.href
                           ? "text-primary font-semibold"
                           : "text-foreground/80 hover:text-foreground"
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
                 </motion.div>
               ))}
             </div>

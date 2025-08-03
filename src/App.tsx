@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Team from "./pages/Team";
+import RoadToWiki from "./pages/RoadToWiki";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/road-to-wiki" element={<RoadToWiki />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/team" element={<Team />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -22,7 +22,7 @@ const Index = () => {
             <img
               src="/lovable-uploads/e12ae66d-dea1-4deb-a63a-81f9fd98707b.png"
               alt="WikiClub Tech United University"
-              className="w-full max-w-4xl mx-auto h-auto"
+              className="w-full max-w-6xl mx-auto h-32 object-cover object-center rounded-lg"
             />
           </motion.div>
 
