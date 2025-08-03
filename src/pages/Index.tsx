@@ -2,6 +2,8 @@ import { motion } from "framer-motion"
 import { ExternalLink, Users, Globe, Rocket, Github, Instagram, Mail } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { ImageSlideshow } from "@/components/image-slideshow"
+import { WikimateChatbot } from "@/components/wikimate-chatbot"
+import { MotivationalQuotes } from "@/components/motivational-quotes"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -223,6 +225,10 @@ const Index = () => {
           </motion.div>
         </div>
       </footer>
+      
+      {/* Chatbot and Quotes */}
+      <WikimateChatbot />
+      <MotivationalQuotes />
     </div>
   );
 };
