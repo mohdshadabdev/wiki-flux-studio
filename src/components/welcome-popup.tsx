@@ -42,7 +42,11 @@ export function WelcomePopup() {
             duration: 0.6,
             bounce: 0.3
           }}
-          className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20 rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 text-center border border-gradient-to-r from-blue-200 via-purple-200 to-green-200"
+          className="relative bg-gradient-to-br from-white via-red-50 to-red-100 dark:from-gray-900 dark:via-red-900/20 dark:to-red-800/30 rounded-3xl shadow-2xl border border-red-200/30 dark:border-red-700/30 max-w-lg w-full mx-4 p-10 text-center backdrop-blur-xl"
+          style={{
+            background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 20%, #fdf2f8 40%, #fce7f3 60%, #fda4af 80%, #be123c 100%)',
+            boxShadow: '0 25px 50px -12px rgba(190, 18, 60, 0.25), 0 0 0 1px rgba(190, 18, 60, 0.1)'
+          }}
         >
           <Button
             variant="ghost"
@@ -60,11 +64,11 @@ export function WelcomePopup() {
             transition={{ delay: 0.3, type: "spring", bounce: 0.4 }}
             className="mb-6"
           >
-            <div className="w-20 h-20 mx-auto bg-gradient-to-br from-red-400 via-green-400 to-blue-400 rounded-full flex items-center justify-center shadow-lg relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-300 via-green-300 to-blue-300 opacity-50 animate-pulse"></div>
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-red-600 via-red-500 to-red-400 rounded-full flex items-center justify-center shadow-xl relative overflow-hidden border-4 border-white/30">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-red-400 to-red-300 opacity-60 animate-pulse"></div>
               <svg
                 viewBox="0 0 100 100"
-                className="w-12 h-12 text-white relative z-10"
+                className="w-14 h-14 text-white relative z-10"
                 fill="currentColor"
               >
                 {/* Wikimedia-style globe with segments */}
@@ -82,13 +86,13 @@ export function WelcomePopup() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text text-transparent mb-2 animate-pulse">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-red-700 via-red-600 to-red-500 bg-clip-text text-transparent mb-3 animate-pulse">
               🙏 Namaste
             </h1>
-            <h2 className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent mb-4">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-red-800 via-red-700 to-red-600 bg-clip-text text-transparent mb-6">
               WikiClubTech United University
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-800 dark:text-gray-200 mb-8 leading-relaxed text-lg font-medium">
               Welcome to our vibrant community of open knowledge and collaborative innovation. 
               Join us in shaping the future of technology and learning together.
             </p>
@@ -104,7 +108,7 @@ export function WelcomePopup() {
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="w-2 h-2 bg-gradient-to-r from-red-400 via-green-400 to-blue-400 rounded-full"
+                className="w-3 h-3 bg-gradient-to-r from-red-600 via-red-500 to-red-400 rounded-full shadow-lg"
                 animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.5, 1, 0.5],
@@ -126,7 +130,7 @@ export function WelcomePopup() {
             transition={{ delay: 1 }}
           >
             <motion.div
-              className="bg-gradient-to-r from-red-400 via-green-400 to-blue-400 h-1 rounded-full"
+              className="bg-gradient-to-r from-red-600 via-red-500 to-red-400 h-2 rounded-full shadow-md"
               initial={{ width: "100%" }}
               animate={{ width: "0%" }}
               transition={{ duration: 8, ease: "linear" }}
