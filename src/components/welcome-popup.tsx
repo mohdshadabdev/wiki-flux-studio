@@ -42,7 +42,7 @@ export function WelcomePopup() {
             duration: 0.6,
             bounce: 0.3
           }}
-          className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 text-center"
+          className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20 rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 text-center border border-gradient-to-r from-blue-200 via-purple-200 to-green-200"
         >
           <Button
             variant="ghost"
@@ -60,14 +60,18 @@ export function WelcomePopup() {
             transition={{ delay: 0.3, type: "spring", bounce: 0.4 }}
             className="mb-6"
           >
-            <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-20 h-20 mx-auto bg-gradient-to-br from-red-400 via-green-400 to-blue-400 rounded-full flex items-center justify-center shadow-lg relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-300 via-green-300 to-blue-300 opacity-50 animate-pulse"></div>
               <svg
-                viewBox="0 0 24 24"
-                className="w-12 h-12 text-white"
+                viewBox="0 0 100 100"
+                className="w-12 h-12 text-white relative z-10"
                 fill="currentColor"
               >
-                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z"/>
-                <path d="M12 4.5L4.5 8.5v8c0 4.14 2.86 7.36 7.5 7.36s7.5-3.22 7.5-7.36v-8L12 4.5z" fill="rgba(255,255,255,0.3)"/>
+                {/* Wikimedia-style globe with segments */}
+                <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.9"/>
+                <path d="M10 50 Q25 25 50 30 Q75 35 90 50 Q75 75 50 70 Q25 65 10 50" fill="rgba(255,255,255,0.3)"/>
+                <path d="M30 20 Q50 15 70 20 Q80 40 70 60 Q50 65 30 60 Q20 40 30 20" fill="rgba(255,255,255,0.2)"/>
+                <circle cx="50" cy="50" r="5" fill="white"/>
               </svg>
             </div>
           </motion.div>
@@ -78,15 +82,15 @@ export function WelcomePopup() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text text-transparent mb-2 animate-pulse">
               🙏 Namaste
             </h1>
-            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            <h2 className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent mb-4">
               WikiClubTech United University
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Welcome to our community of open knowledge and collaborative innovation. 
-              Join us in shaping the future of technology and learning.
+            <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+              Welcome to our vibrant community of open knowledge and collaborative innovation. 
+              Join us in shaping the future of technology and learning together.
             </p>
           </motion.div>
 
@@ -100,7 +104,7 @@ export function WelcomePopup() {
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
+                className="w-2 h-2 bg-gradient-to-r from-red-400 via-green-400 to-blue-400 rounded-full"
                 animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.5, 1, 0.5],
@@ -122,7 +126,7 @@ export function WelcomePopup() {
             transition={{ delay: 1 }}
           >
             <motion.div
-              className="bg-gradient-to-r from-blue-500 to-purple-600 h-1 rounded-full"
+              className="bg-gradient-to-r from-red-400 via-green-400 to-blue-400 h-1 rounded-full"
               initial={{ width: "100%" }}
               animate={{ width: "0%" }}
               transition={{ duration: 8, ease: "linear" }}

@@ -51,28 +51,34 @@ export const MotivationalQuotes = () => {
     // Select a random quote when component mounts
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     setCurrentQuote(randomQuote);
-    setIsVisible(true);
     
-    // Start countdown
-    const countdown = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          setIsVisible(false);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+    // Delay showing the quote by 8 seconds (after welcome popup)
+    const showTimer = setTimeout(() => {
+      setIsVisible(true);
+      
+      // Start countdown after showing
+      const countdown = setInterval(() => {
+        setTimeLeft((prev) => {
+          if (prev <= 1) {
+            setIsVisible(false);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
 
-    // Auto hide after 5 seconds
-    const hideTimer = setTimeout(() => {
-      setIsVisible(false);
-    }, 5000);
+      // Auto hide after 5 seconds
+      const hideTimer = setTimeout(() => {
+        setIsVisible(false);
+      }, 5000);
 
-    return () => {
-      clearInterval(countdown);
-      clearTimeout(hideTimer);
-    };
+      return () => {
+        clearInterval(countdown);
+        clearTimeout(hideTimer);
+      };
+    }, 8000);
+
+    return () => clearTimeout(showTimer);
   }, []);
 
   const handleClose = () => {

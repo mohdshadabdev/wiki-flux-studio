@@ -23,9 +23,10 @@ const Index = () => {
             className="text-center mb-12"
           >
             <img
-              src="/lovable-uploads/e12ae66d-dea1-4deb-a63a-81f9fd98707b.png"
+              src="/lovable-uploads/7f10d484-358a-4b5b-a9b2-a7be0a44b7c0.png"
               alt="WikiClub Tech United University"
               className="w-full max-w-6xl mx-auto h-32 object-cover object-center rounded-lg"
+              loading="eager"
             />
           </motion.div>
 

@@ -65,12 +65,13 @@ export const WikimateChatbot = () => {
     return "I'm still learning! 🤖 This bot is under deployment and more features are coming soon. For now, try asking about Road to Wiki, Wikimedia Foundation, benefits, selection process, or Wiki Club Tech. You can also reach out to our team directly!";
   };
 
-  const handleSendMessage = () => {
-    if (!inputText.trim()) return;
+  const handleSendMessage = (messageText?: string) => {
+    const textToSend = messageText || inputText.trim();
+    if (!textToSend) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: inputText,
+      text: textToSend,
       isUser: true,
       timestamp: new Date()
     };
@@ -83,7 +84,7 @@ export const WikimateChatbot = () => {
     setTimeout(() => {
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: findAnswer(inputText),
+        text: findAnswer(textToSend),
         isUser: false,
         timestamp: new Date()
       };
@@ -93,8 +94,8 @@ export const WikimateChatbot = () => {
   };
 
   const handleQuestionClick = (question: string) => {
-    setInputText(question);
-    handleSendMessage();
+    // Auto-send the question without typing in input
+    handleSendMessage(question);
   };
 
   return (
@@ -220,7 +221,7 @@ export const WikimateChatbot = () => {
                       className="flex-1 bg-background/50 border-white/20"
                     />
                     <Button 
-                      onClick={handleSendMessage}
+                      onClick={() => handleSendMessage()}
                       size="sm"
                       className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
                     >
