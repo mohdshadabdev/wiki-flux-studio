@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { ImageSlideshow } from "@/components/image-slideshow"
 import { WikimateChatbot } from "@/components/wikimate-chatbot"
 import { MotivationalQuotes } from "@/components/motivational-quotes"
+import { WelcomePopup } from "@/components/welcome-popup"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -48,7 +49,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
               About Wiki Club Tech — United University
             </h2>
             <div className="max-w-4xl mx-auto">
@@ -83,7 +84,7 @@ const Index = () => {
                     <Globe className="h-8 w-8 text-white" />
                   </div>
                 </div>
-                <CardTitle className="text-3xl font-bold font-poppins mb-4">
+                <CardTitle className="text-3xl font-bold font-poppins mb-4 bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 bg-clip-text text-transparent animate-pulse">
                   About Wikimedia Foundation
                 </CardTitle>
               </CardHeader>
@@ -121,7 +122,7 @@ const Index = () => {
                     <Rocket className="h-8 w-8 text-white" />
                   </div>
                 </div>
-                <CardTitle className="text-4xl font-bold font-poppins mb-4">
+                <CardTitle className="text-4xl font-bold font-poppins mb-4 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
                   🚀 Road to Wiki Program
                 </CardTitle>
                 <CardDescription className="text-white/90 text-lg">
@@ -225,6 +226,9 @@ const Index = () => {
           </motion.div>
         </div>
       </footer>
+      
+      {/* Welcome Popup */}
+      <WelcomePopup />
       
       {/* Chatbot and Quotes */}
       <WikimateChatbot />
