@@ -23,7 +23,7 @@ const Index = () => {
             className="text-center mb-12"
           >
             <img
-              src="/uploads/7f10d484-358a-4b5b-a9b2-a7be0a44b7c0.png"
+              src="/lovable-uploads/7f10d484-358a-4b5b-a9b2-a7be0a44b7c0.png"
               alt="WikiClub Tech United University"
               className="w-full max-w-6xl mx-auto object-contain rounded-lg"
               loading="eager"
