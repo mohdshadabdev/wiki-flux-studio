@@ -11,6 +11,7 @@ const navItems = [
   { name: "Road to Wiki", href: "/road-to-wiki" },
   { name: "Gallery", href: "/gallery" },
   { name: "Team", href: "/team" },
+  { name: "Code of Conduct", href: "/code-of-conduct" },
 ]
 
 export function Navigation() {
