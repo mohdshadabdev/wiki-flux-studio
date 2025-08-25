@@ -71,39 +71,34 @@ const CodeOfConduct = () => {
 
   const sections = [
     {
-      title: "Respect & Inclusivity",
+      title: "Core Values",
       icon: <Heart className="w-6 h-6" />,
-      content: "Treat everyone with respect regardless of background, identity, or experience level. No discrimination, harassment, or exclusionary behavior will be tolerated."
+      content: "We uphold the principles of respect, inclusivity, and integrity. Every member is valued regardless of their background, identity, or experience level. We foster an environment where diversity is celebrated and everyone feels welcome to contribute their unique perspectives and skills."
     },
     {
-      title: "Professionalism",
-      icon: <Shield className="w-6 h-6" />,
-      content: "Be punctual, reliable, and responsible in all volunteer activities. Maintain professional standards in communication and conduct."
-    },
-    {
-      title: "Collaboration & Teamwork",
-      icon: <Users className="w-6 h-6" />,
-      content: "Support and share knowledge with fellow volunteers. Foster a collaborative environment that encourages learning and growth."
-    },
-    {
-      title: "Integrity & Responsibility",
-      icon: <CheckCircle className="w-6 h-6" />,
-      content: "Use WikiClub resources ethically and responsibly. Stay accountable for your actions and commitments to the organization."
-    },
-    {
-      title: "Learning & Contribution",
+      title: "Decision-making",
       icon: <Lightbulb className="w-6 h-6" />,
-      content: "Embrace the spirit of open knowledge and Wikimedia values. Actively contribute to the mission of free and accessible information."
+      content: "All decisions within WikiClub Tech UU are made transparently and collaboratively. We encourage open discussion, welcome feedback from all members, and ensure that important decisions are communicated clearly to the community with proper reasoning and context."
     },
     {
-      title: "Digital Etiquette",
-      icon: <MessageSquare className="w-6 h-6" />,
-      content: "Communicate respectfully in all digital platforms. Avoid spam, inappropriate content, and maintain constructive dialogue."
-    },
-    {
-      title: "Consequences of Violation",
+      title: "Unacceptable Behavior",
       icon: <AlertTriangle className="w-6 h-6" />,
-      content: "Violations of this code may result in warnings, temporary suspension, or removal from WikiClub Tech UU, depending on severity."
+      content: "We have zero tolerance for harassment, discrimination, hate speech, or any form of abusive behavior. This includes but is not limited to: offensive comments, intimidation, stalking, inappropriate physical contact, unwelcome sexual attention, or disruption of events and discussions."
+    },
+    {
+      title: "Reporting",
+      icon: <MessageSquare className="w-6 h-6" />,
+      content: "If you experience or witness any violations of this code of conduct, please report it immediately to our leadership team at contact@wikiclubtechuu.online. All reports will be handled confidentially and investigated promptly with appropriate action taken."
+    },
+    {
+      title: "Conflicts of Interest",
+      icon: <Shield className="w-6 h-6" />,
+      content: "Members must disclose any potential conflicts of interest that may affect their participation in WikiClub activities. We maintain transparency in all partnerships, sponsorships, and collaborations to ensure the integrity of our mission and values."
+    },
+    {
+      title: "Violation Consequences",
+      icon: <CheckCircle className="w-6 h-6" />,
+      content: "Violations of this code may result in warnings, temporary suspension of privileges, or permanent removal from WikiClub Tech UU, depending on the severity and frequency of violations. All enforcement actions will be fair, proportionate, and documented appropriately."
     }
   ];
 
@@ -151,6 +146,51 @@ const CodeOfConduct = () => {
           </div>
         </motion.div>
 
+        {/* Community Message Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="max-w-4xl mx-auto mb-12"
+        >
+          <Card className="bg-gradient-to-br from-background to-muted/30 border-2 border-primary/20 shadow-lg">
+            <CardHeader className="text-center pb-4">
+              <CardTitle className="text-2xl text-foreground">
+                Message to Our Community
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed text-center">
+                Dear WikiClub Tech UU Community,
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                We want you to know that your safety, privacy, and connection with us are our top priorities. 
+                We deeply appreciate your trust and support as we strive to provide a protected and inclusive 
+                environment for all. Your privacy is highly valued, and we have implemented strong measures to 
+                ensure the confidentiality of your personal information.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                We are committed to fostering diversity and inclusivity within our community. Our programs 
+                celebrate individuals from all backgrounds, ensuring that everyone feels valued and respected. 
+                We are dedicated to delivering the best possible experience to you. Your feedback is crucial 
+                in helping us improve and meet your expectations. Please feel free to share your thoughts and 
+                suggestions with us on <a href="mailto:contact@wikiclubtechuu.online" className="text-primary hover:underline">contact@wikiclubtechuu.online</a>.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Your safety is paramount. As we navigate these challenging times, whether online or in-person, 
+                we are committed to providing a safe and secure environment for all community members. We are 
+                grateful for your belief in us and for being a part of WikiClub Tech UU. Together, let's 
+                continue to learn, grow, and thrive.
+              </p>
+              <div className="text-center pt-4">
+                <p className="text-muted-foreground">
+                  Join us on <a href="https://linktr.ee/wikiclubtechuu" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">https://linktr.ee/wikiclubtechuu</a>
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         {/* Main Sections */}
         <div className="max-w-4xl mx-auto mb-12">
           <div className="grid gap-6">
@@ -159,15 +199,15 @@ const CodeOfConduct = () => {
                 key={section.title}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.1 + 0.3 }}
               >
-                <Card className="border-l-4 border-l-primary">
+                <Card className="border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3 text-xl">
-                      <div className="text-primary">
+                      <div className="text-primary bg-primary/10 p-2 rounded-full">
                         {section.icon}
                       </div>
-                      {section.title}
+                      <span className="text-lg font-semibold">{index + 1}. {section.title}</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
