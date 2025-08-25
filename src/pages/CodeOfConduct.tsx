@@ -104,7 +104,7 @@ const CodeOfConduct = () => {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-background pt-20">
+      <div className="min-h-screen bg-slate-50 pt-20">
         <div className="container mx-auto px-4 py-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -127,7 +127,7 @@ const CodeOfConduct = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-slate-50 pt-20">
       <div className="container mx-auto px-4 py-8">
         {/* Header Section */}
         <motion.div
@@ -136,10 +136,10 @@ const CodeOfConduct = () => {
           className="max-w-4xl mx-auto mb-12"
         >
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl font-bold text-slate-800 mb-4">
               WikiClub Tech UU – Volunteer Code of Conduct
             </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               This Code of Conduct outlines the values and responsibilities of all volunteers at WikiClub Tech UU. 
               By agreeing below, you confirm your commitment to professionalism, inclusivity, and the Wikimedia spirit.
             </p>
@@ -153,38 +153,38 @@ const CodeOfConduct = () => {
           transition={{ delay: 0.2 }}
           className="max-w-4xl mx-auto mb-12"
         >
-          <Card className="bg-gradient-to-br from-background to-muted/30 border-2 border-primary/20 shadow-lg">
+          <Card className="bg-gradient-to-br from-white to-blue-50/50 border-2 border-blue-200/50 shadow-lg">
             <CardHeader className="text-center pb-4">
-              <CardTitle className="text-2xl text-foreground">
+              <CardTitle className="text-2xl text-slate-800">
                 Message to Our Community
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-muted-foreground leading-relaxed text-center">
+              <p className="text-slate-600 leading-relaxed text-center">
                 Dear WikiClub Tech UU Community,
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 We want you to know that your safety, privacy, and connection with us are our top priorities. 
                 We deeply appreciate your trust and support as we strive to provide a protected and inclusive 
                 environment for all. Your privacy is highly valued, and we have implemented strong measures to 
                 ensure the confidentiality of your personal information.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 We are committed to fostering diversity and inclusivity within our community. Our programs 
                 celebrate individuals from all backgrounds, ensuring that everyone feels valued and respected. 
                 We are dedicated to delivering the best possible experience to you. Your feedback is crucial 
                 in helping us improve and meet your expectations. Please feel free to share your thoughts and 
-                suggestions with us on <a href="mailto:contact@wikiclubtechuu.online" className="text-primary hover:underline">contact@wikiclubtechuu.online</a>.
+                suggestions with us on <a href="mailto:contact@wikiclubtechuu.online" className="text-blue-600 hover:underline">contact@wikiclubtechuu.online</a>.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 Your safety is paramount. As we navigate these challenging times, whether online or in-person, 
                 we are committed to providing a safe and secure environment for all community members. We are 
                 grateful for your belief in us and for being a part of WikiClub Tech UU. Together, let's 
                 continue to learn, grow, and thrive.
               </p>
               <div className="text-center pt-4">
-                <p className="text-muted-foreground">
-                  Join us on <a href="https://linktr.ee/wikiclubtechuu" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">https://linktr.ee/wikiclubtechuu</a>
+                <p className="text-slate-600">
+                  Join us on <a href="https://linktr.ee/wikiclubtechuu" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">https://linktr.ee/wikiclubtechuu</a>
                 </p>
               </div>
             </CardContent>
@@ -201,17 +201,17 @@ const CodeOfConduct = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
               >
-                <Card className="border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow">
+                <Card className="bg-white border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3 text-xl">
-                      <div className="text-primary bg-primary/10 p-2 rounded-full">
+                      <div className="text-blue-600 bg-blue-100 p-2 rounded-full">
                         {section.icon}
                       </div>
-                      <span className="text-lg font-semibold">{index + 1}. {section.title}</span>
+                      <span className="text-lg font-semibold text-slate-800">{index + 1}. {section.title}</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-slate-600 leading-relaxed">
                       {section.content}
                     </p>
                   </CardContent>
@@ -228,9 +228,9 @@ const CodeOfConduct = () => {
           transition={{ delay: 0.3 }}
           className="max-w-2xl mx-auto"
         >
-          <Card>
+          <Card className="bg-white shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Agreement Form</CardTitle>
+              <CardTitle className="text-2xl text-center text-slate-800">Agreement Form</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
