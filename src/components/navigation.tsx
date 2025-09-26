@@ -11,6 +11,7 @@ const navItems = [
   { name: "Road to Wiki", href: "/road-to-wiki" },
   { name: "Gallery", href: "/gallery" },
   { name: "Team", href: "/team" },
+  { name: "Validator", href: "/validator" },
   { name: "Code of Conduct", href: "/code-of-conduct" },
 ]
 

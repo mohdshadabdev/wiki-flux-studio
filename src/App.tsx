@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Team from "./pages/Team";
 import RoadToWiki from "./pages/RoadToWiki";
+import Validator from "./pages/Validator";
 import CodeOfConduct from "./pages/CodeOfConduct";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/road-to-wiki" element={<RoadToWiki />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/validator" element={<Validator />} />
             <Route path="/code-of-conduct" element={<CodeOfConduct />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
