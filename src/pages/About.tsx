@@ -19,12 +19,6 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <Link to="/">
-              <Button variant="outline" className="mb-6 glass text-white border-white/20 hover:bg-white/10">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 font-poppins">
               About Wiki Club Tech
             </h1>

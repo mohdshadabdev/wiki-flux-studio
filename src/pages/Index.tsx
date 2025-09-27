@@ -178,6 +178,61 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Join Our Club Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <Card className="glass hover-lift max-w-4xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10">
+              <CardHeader className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 rounded-full gradient-bg flex items-center justify-center">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <CardTitle className="text-3xl md:text-4xl font-bold font-poppins mb-4 gradient-text">
+                  Join Our Growing Community
+                </CardTitle>
+                <CardDescription className="text-lg text-foreground/80">
+                  Be part of something bigger than yourself
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-lg text-foreground/80 mb-6 leading-relaxed max-w-2xl mx-auto">
+                  Ready to make a difference in the world of open knowledge? Join our passionate community 
+                  of students, developers, and knowledge enthusiasts. Whether you're a beginner or an expert, 
+                  there's a place for you in our mission to democratize knowledge and technology.
+                </p>
+                <p className="text-lg text-foreground/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+                  As a volunteer, you'll gain valuable experience, build lasting connections, contribute to 
+                  meaningful projects, and help shape the future of open education and technology.
+                </p>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    size="lg"
+                    className="text-lg px-8 py-4 gradient-bg text-white hover-glow font-semibold"
+                    onClick={() => window.open("https://forms.gle/bNZdKYJ9d7ssbmbCA", "_blank")}
+                  >
+                    <Users className="mr-2 h-5 w-5" />
+                    Become a Volunteer
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                  </Button>
+                </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-16 bg-foreground text-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

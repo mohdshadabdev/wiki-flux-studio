@@ -130,12 +130,6 @@ const Gallery = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <Link to="/">
-              <Button variant="outline" className="mb-8 hover-lift">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
 
             <motion.div
               initial={{ scale: 0 }}

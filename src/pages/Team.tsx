@@ -179,8 +179,8 @@ const TeamCard = ({ member, showRole = false }: { member: any, showRole?: boolea
     className="group"
   >
     <Card className="glass hover-lift overflow-hidden h-full">
-      <CardContent className="p-6 text-center">
-        <div className="relative mb-4 mx-auto w-24 h-24 md:w-28 md:h-28">
+      <CardContent className="p-8 text-center">
+        <div className="relative mb-6 mx-auto w-32 h-32 md:w-36 md:h-36">
           <img
             src={member.image}
             alt={member.name}
@@ -244,12 +244,6 @@ const Team = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <Link to="/">
-              <Button variant="outline" className="mb-8 hover-lift">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
 
             <motion.div
               initial={{ scale: 0 }}
