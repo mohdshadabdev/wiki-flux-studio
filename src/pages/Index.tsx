@@ -3,8 +3,6 @@ import { ExternalLink, Users, Globe, Rocket, Github, Instagram, Mail } from "luc
 import { Navigation } from "@/components/navigation"
 import { ImageSlideshow } from "@/components/image-slideshow"
 import { WikimateChatbot } from "@/components/wikimate-chatbot"
-import { MotivationalQuotes } from "@/components/motivational-quotes"
-import { WelcomePopup } from "@/components/welcome-popup"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -283,12 +281,8 @@ const Index = () => {
         </div>
       </footer>
       
-      {/* Welcome Popup */}
-      <WelcomePopup />
-      
-      {/* Chatbot and Quotes */}
+      {/* Chatbot */}
       <WikimateChatbot />
-      <MotivationalQuotes />
     </div>
   );
 };
